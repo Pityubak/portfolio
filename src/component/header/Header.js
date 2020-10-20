@@ -31,11 +31,11 @@ class Header extends Component {
     const anchor = document.querySelector(id)
     anchor.scrollIntoView({    behavior: 'smooth', 
     block: 'start' ,inline: "nearest" });
-    // if (id !== "#welcome"){
-    //   this.setState({
-    //     collapse: !this.state.collapse
-    //   });
-    
+    if (id !== "#welcome" && this.props.windowWidth<992){
+      this.setState({
+        collapse: !this.state.collapse
+      });
+    }
   }
 
   render() {
