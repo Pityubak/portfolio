@@ -24,14 +24,16 @@ class Header extends Component {
   }
 
 
- 
-    
+
+
 
   scrollToDiv = (id) => {
     const anchor = document.querySelector(id)
-    anchor.scrollIntoView({    behavior: 'smooth', 
-    block: 'start' ,inline: "nearest" });
-    if (id !== "#welcome" && this.props.windowWidth<992){
+    anchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start', inline: "nearest"
+    });
+    if (id !== "#welcome" && this.props.windowWidth < 992) {
       this.setState({
         collapse: !this.state.collapse
       });
@@ -39,8 +41,7 @@ class Header extends Component {
   }
 
   render() {
-    const cls = this.props.windowWidth > 1396 ? "header-item " :
-      "header-item header-item--lg";
+ 
 
 
     return (
@@ -48,34 +49,34 @@ class Header extends Component {
         <header>
           <MDBNavbar className={this.state.collapse && this.props.windowWidth < 400 && "navbar-color"} color="stylish-color" fixed="top" dark expand="lg" scrolling transparent>
             <MDBNavbarBrand >
-              <NavLink onClick={() => this.scrollToDiv("#welcome")} title={<div style={{ cursor: "pointer" }}>
+              <NavLink onClick={() => this.scrollToDiv("#welcome")} empty><div style={{ cursor: "pointer" }}>
                 <img src={Logo} alt="logo" width={this.props.windowWidth < 600 ? "30px" : "50px"} />
                 <strong style={this.props.windowWidth < 600 ? { marginLeft: "7px", fontSize: "1rem" } : { marginLeft: "10px" }}>Elszámolás 2000 Bt.</strong>
-              </div>} ></NavLink>
+              </div></NavLink>
             </MDBNavbarBrand>
-            <MDBNavbarToggler onClick={this.onClick} />
-            <MDBCollapse isOpen={this.state.collapse} navbar>
-              <MDBNavbarNav right >
+              <MDBNavbarToggler onClick={this.onClick} />
+              <MDBCollapse isOpen={this.state.collapse} navbar>
+                <MDBNavbarNav right >
 
-                <MDBNavItem>
-                  <div className={cls}><MDBIcon icon="info-circle" /><NavLink onClick={() => this.scrollToDiv("#home")}
-                    title="Bemutatkozás" className="header-item--link" /></div>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <div className={cls}><MDBIcon icon="chart-pie" /><NavLink onClick={() => this.scrollToDiv("#service")}
-                    title="Szolgáltatásaink" className="header-item--link" /> </div>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <div className={cls}><MDBIcon icon="calculator" /><NavLink title="Könyvelési díj kalkulátor" onClick={() => this.scrollToDiv("#calculator")}
-                    className="header-item--link" /> </div>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <div className={cls}><MDBIcon icon="headphones-alt" /><NavLink title="Kapcsolat" onClick={() => this.scrollToDiv("#contact")}
-                    className="header-item--link" /> </div>
+                  <MDBNavItem>
+                    <NavLink onClick={() => this.scrollToDiv("#home")}
+                      title="Bemutatkozás" icon="info-circle" />
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <NavLink onClick={() => this.scrollToDiv("#service")}
+                      title="Szolgáltatásaink" icon="chart-pie" />
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <NavLink title="Könyvelési díj kalkulátor" onClick={() => this.scrollToDiv("#calculator")} icon="calculator" />
 
-                </MDBNavItem>
-              </MDBNavbarNav>
-            </MDBCollapse>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <NavLink title="Kapcsolat" onClick={() => this.scrollToDiv("#contact")} icon="headphones-alt" />
+
+
+                  </MDBNavItem>
+                </MDBNavbarNav>
+              </MDBCollapse>
           </MDBNavbar>
         </header>
       </MDBContainer>
