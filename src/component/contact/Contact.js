@@ -55,7 +55,7 @@ class Contact extends Component {
     render() {
         return (
 
-            <MDBContainer fluid id={"contact"} className="contact contact-bg" >
+            <MDBContainer fluid id={"contact"} className=" top contact contact-bg" >
                 {this.state.success && <Notification icon="check-circle"
                     title="Sikeres üzenetküldés"
                     message="Üzenetét elküldtük. Hamarosan fel vesszük Önnel a kapcsolatot." />}

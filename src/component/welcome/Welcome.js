@@ -7,7 +7,7 @@ class Welcome extends Component {
 
     render() {
         return (<div className="welcome" id={"welcome"}>
-            <Carousel isWideEnough={true} />
+            <Carousel  />
         </div>)
     }
 }

@@ -11,7 +11,7 @@ class Home extends Component {
 
 
     render() {
-        const isWide = this.props.windowWidth > 1198 ? <Roll cascade duration={60} direction={"right"} className={"home-title--misc"}>  Több, mint 20 éve cégünk kezdő és már működő cégek (Kft, Bt),
+        const isWide = this.props.windowWidth > 1198 ? <Roll cascade duration={60} direction={"right"} >  Több, mint 20 éve cégünk kezdő és már működő cégek (Kft, Bt),
         egyéni vállalkozások és non-profit szervezetek teljes körű könyvelését vállalja. </Roll> : " Több, mint 20 éve cégünk kezdő és már működő cégek (Kft, Bt), egyéni vállalkozások és non-profit szervezetek teljes körű könyvelését vállalja."
         return (
             <MDBContainer fluid className={ this.props.windowWidth > 900 ? "home-lg" :

@@ -249,9 +249,9 @@ class Calculator extends Component {
 
                 <MDBCol className={col}>
                   <form className="mx-3 grey-text">
-                    <label for="type"> Vállalkozása típusa</label>
+                    <label htmlFor="type"> Vállalkozása típusa</label>
                     <select className={cls} id="type" name="type" value={this.state.type} onChange={this.toggle}  >
-                      <option value="" selected disabled hidden>Kérjük válasszon...</option>
+                      <option value=""  disabled hidden>Kérjük válasszon...</option>
                       <option >Egyéni vállalkozó</option>
                       <option >Korlátolt felelősségű társaság</option>
                       <option >Betéti társaság</option>
@@ -268,7 +268,7 @@ class Calculator extends Component {
                       </div>
                     </Collapse>
                     <Collapse collapse={this.state.collapseMore}>
-                      <label for="numbrOfB"> Bizonylatok száma havonta(kp-s számlák, pénztár napi zárások, átutalásos számlák,bankszámlakivonatokon szereplő tételek )</label>
+                      <label htmlFor="numbrOfB"> Bizonylatok száma havonta(kp-s számlák, pénztár napi zárások, átutalásos számlák,bankszámlakivonatokon szereplő tételek )</label>
                       <select className="browser-default custom-select" id="numberOfB" name="numberOfB" value={this.state.numberOfB} onChange={this.handleChange}>
                         <option id="1">1-50</option>
                         <option id="2">51-100</option>
@@ -277,7 +277,7 @@ class Calculator extends Component {
                         <option name="numberOfB">301-500 </option>
                         <option name="numberOfB">500 felett </option>
                       </select>
-                      <label for="netto"> Éves nettó árbevétel</label>
+                      <label htmlFor="netto"> Éves nettó árbevétel</label>
                       <select className="browser-default custom-select" id="netto" name="netto" value={this.state.netto} onChange={this.handleChange} >
                         <option name="netto">0-10 millióig</option>
                         <option name="netto">11-50 millióig</option>
@@ -285,14 +285,14 @@ class Calculator extends Component {
                         <option name="netto">101-500 millióig</option>
                         <option name="netto">500 millió felett</option>
                       </select>
-                      <label for="numberOfA"> Áfa gyakorisága</label>
+                      <label htmlFor="numberOfA"> Áfa gyakorisága</label>
                       <select className="browser-default custom-select" id="numberOfA" name="numberOfA" value={this.state.numberOfA} onChange={this.handleChange} >
                         <option name="numberOfA">nem vagyok áfa adóalany</option>
                         <option name="numberOfA">havi</option>
                         <option name="numberOfA">negyedéves</option>
                         <option name="numberOfA">éves</option>
                       </select>
-                      <label for="numberOfD">Devizás forgalom</label>
+                      <label htmlFor="numberOfD">Devizás forgalom</label>
                       <select className="browser-default custom-select" id="numberOfD" name="numberOfD" value={this.state.numberOfD} onChange={this.handleChange}>
                         <option name="numberOfD">Nem</option>
                         <option name="numberOfD">Igen, jelentős</option>

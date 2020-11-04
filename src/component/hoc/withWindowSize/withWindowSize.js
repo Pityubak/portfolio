@@ -18,7 +18,6 @@ export default function withWindowSize(WrappedComponent) {
         };
 
         render() {
-            console.log("Size: "+this.state.width);
             return (
                 <WrappedComponent
                     {...this.props}

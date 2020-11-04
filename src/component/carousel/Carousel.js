@@ -10,6 +10,7 @@ import FirstImage from "./carouselimg/FirstImage";
 import SecondImage from "./carouselimg/SecondImage";
 import ThirdImage from "./carouselimg/ThirdImage";
 
+
 class Carousel extends Component {
 
     constructor() {
@@ -23,7 +24,7 @@ class Carousel extends Component {
     handleAnimation = () => {
         return (
 
-            <div >
+            <div  >
 
                 <div>
                     <Slide direction={"left"} duration={3000}
@@ -78,12 +79,6 @@ class Carousel extends Component {
                         <MDBCarouselItem itemId="1" >
                             <MDBView waves>
                                 <FirstImage/>
-                                {/* <img
-                                    style={{ maxHeight: "100vh" }}
-                                    className="d-block w-100"
-                                    src={FirstSlide}
-                                    alt="First slide"
-                                /> */}
                                 <MDBMask overlay="black-strong" className="flex-center" >
                                     {this.props.windowWidth < 1100 ? <Slide direction={"left"} duration={3000}
                                     >
@@ -97,12 +92,6 @@ class Carousel extends Component {
                         <MDBCarouselItem itemId="2">
                             <MDBView waves>
                                 <SecondImage />
-                                {/* <img
-                                    style={{ maxHeight: "100vh" }}
-                                    className="d-block w-100"
-                                    src={SecondSlide}
-                                    alt="Second slide"
-                                /> */}
                                 <MDBMask overlay="black-strong" className="flex-center" >
                                     {this.props.windowWidth < 1100 ? <Slide direction={"right"} duration={3000}
                                     >
@@ -117,12 +106,6 @@ class Carousel extends Component {
                         <MDBCarouselItem itemId="3">
                             <MDBView waves>
                                 <ThirdImage />
-                                {/* <img
-                                    style={{ maxHeight: "100vh" }}
-                                    className="d-block w-100"
-                                    src={Thirdlide}
-                                    alt="Third slide"
-                                /> */}
                                 <MDBMask overlay="black-strong" className="flex-center" >
                                     {this.props.windowWidth < 1100 ? <Slide direction={"up"} duration={3000}
                                     >

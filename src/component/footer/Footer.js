@@ -15,7 +15,7 @@ const Footer = () => {
       </MDBContainer>
  <div >
         <MDBContainer fluid>
-          <MDBRow center><a href="https://github.com/Pityubak" >Created by Pityubak</a> </MDBRow>  
+          <MDBRow center><a href="https://github.com/Pityubak" rel="noopener noreferrer" target="_blank" >Created by Pityubak</a> </MDBRow>  
         </MDBContainer>
       </div> 
     </MDBFooter>

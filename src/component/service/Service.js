@@ -28,8 +28,6 @@ class Service extends Component {
         return (
 
             <MDBContainer id={"service"} className={"pd"} >
-                {/* <Modal isOpen={this.state.modal} toggle={this.openModal} /> */}
-
                 <MDBRow >
                     <AttentionSeeker effect="jello">
                         <MDBCard border="rgba-teal-strong" className="service">
