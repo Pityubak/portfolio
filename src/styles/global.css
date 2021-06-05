@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: dash 10s ease-in-out;
+  fill: none;
+  animation-fill-mode: both;
+  stroke: currentColor;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    fill: currentColor;
+    stroke: none;
+  }
+}
+::selection {
+  background-color: #2b2b2b;
+  color: #28d7c6;
+}
+
+circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.layout {
+  transform: rotateX(0deg);
+  /* transform-origin:center bottom; */
+  animation: rightSlide 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+  /* transform-style: preserve-3d;
+  backface-visibility: hidden; */
+}
+.upSlide {
+  animation: upSlide 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.downSlide {
+  animation: downSlide 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+}
+@keyframes upSlide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes downSlide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
