@@ -29,10 +29,10 @@ const Sidebar = () => {
     }, 10000)
   }, [])
   return (
-    <div className="h-full h-136  w-48    ">
+    <div className="lg:h-full w-full  lg:w-48 lg:border-none border-b">
       {cache && cache.position !== 0 && (
         <div className="w-full h-full   flex flex-col justify-center items-center">
-          <div className="w-4/5 flex flex-col justify-center m-4 shadow-2xl  items-center">
+          <div className="w-4/5 flex flex-col justify-center m-4 lg:shadow-2xl  items-center">
             {sidebarCount ? (
               <CountUp
                 className="text-prl3 text-lg font-bold"
@@ -49,7 +49,7 @@ const Sidebar = () => {
             )}
             <span className="text-prl3"> in Worldwide</span>
           </div>
-          <div className="w-4/5 m-4 flex flex-col justify-center shadow-2xl items-center">
+          <div className="w-4/5 m-4 flex flex-col justify-center lg:shadow-2xl items-center">
             {sidebarCount ? (
               <CountUp
                 className="text-prl3 text-lg font-bold"
@@ -67,17 +67,17 @@ const Sidebar = () => {
               setTranslateAmount((translateAmount - 50) % 150)
               // recreateBadgeArray()
             }}
-            className=" disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
+            className="hidden lg:block disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
             <UpIcon />
           </button>
-          <div className={` h-52 overflow-hidden relative `}>
+          <div className={` lg:h-52 mt-8 lg:mt-0 lg:block flex flex-row flex-wrap lg:flex-nowrap justify-center lg:overflow-hidden relative `}>
             {badges?.map(badge => {
               counter++
               return (
                 <div
                   key={badge.language + counter}
-                  className={`text-sm h-20 w-20 my-4 relative transition duration-700 ease-in-out transform -translate-y-${translateAmount}`}
+                  className={`text-sm h-32 lg:h-20 w-20 lg:my-4 mx-4 relative transition duration-700 ease-in-out transform  lg:-translate-y-${translateAmount}`}
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">
                     <div
@@ -104,11 +104,11 @@ const Sidebar = () => {
               setTranslateAmount((translateAmount + 50) % 150)
               // recreateBadgeArray()
             }}
-            className="text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
+            className=" hidden lg:block text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
             <DownIcon />
           </button>
-          <div className="text-center text-xs m-2 bg-prl3 px-1 rounded-sm">
+          <div className="text-center text-xs lg:m-2  m-4 bg-prl3 lg:px-1 px-2 py-2 lg:py-0 rounded-sm">
             Powered by <strong>Codersrank.io</strong>
           </div>
         </div>

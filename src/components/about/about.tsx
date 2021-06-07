@@ -1,17 +1,18 @@
 import * as React from "react"
 import MeIcon from "../../assets/me.svg"
 import EmailIcon from "../../assets/email.svg"
+import LocationIcon from "../../assets/location.svg"
 import Circle from "./circle"
 
 const skillsData = [
   {
     name: "Java",
-    level: 65,
+    level: 60,
     color: "#F4D35E",
   },
   {
     name: "JavaScript",
-    level: 45,
+    level: 40,
     color: "#7CB4B8",
   },
   {
@@ -36,7 +37,7 @@ const skillsData = [
   },
   {
     name: "C#",
-    level: 25,
+    level: 20,
     color: "#F4FAFF",
   },
   {
@@ -46,12 +47,12 @@ const skillsData = [
   },
   {
     name: "Wordpress",
-    level: 15,
+    level: 10,
     color: "#B7ADCF",
   },
   {
     name: "Material UI",
-    level: 75,
+    level: 70,
     color: "#22AED1",
   },
   {
@@ -61,12 +62,12 @@ const skillsData = [
   },
   {
     name: "GraphQL",
-    level: 45,
+    level: 40,
     color: "#EBBE9B",
   },
   {
     name: "Spring Boot",
-    level: 30,
+    level: 25,
     color: "#8447FF",
   },
   {
@@ -87,8 +88,8 @@ interface AboutProps {
 const AboutMe = ({ className }: AboutProps) => {
   return (
     <div className={`flex flex-1  items-center ${className}`}>
-      <div className=" flex flex-1 w-full h-136 flex-col items-center overflow-y-auto  ">
-        <div className="w-9/12 px-10 py-4 relative my-10  rounded-md">
+      <div className=" flex flex-1 w-full lg:h-136 flex-col items-center lg:overflow-y-auto  ">
+        <div className=" w-full md:w-10/12 lg:w-9/12 md:px-10 sm:px-4 px-2 py-4 relative my-10  rounded-md">
           <h1 className="font-semibold text-center text-lg text-white mb-8 ">
             My skills
           </h1>
@@ -108,8 +109,8 @@ const AboutMe = ({ className }: AboutProps) => {
             })}
           </div>
         </div>
-        <div className="flex   h-72  my-8   shadow-2xl border ">
-          <div className=" w-72  h-72 text-black bg-pine cursor-pointer flex items-center justify-center relative ">
+        <div className="flex flex-col lg:flex-row  xl:h-72  my-8   shadow-2xl  ">
+          <div className="w-80 h-80 md:w-96 md:h-96 lg:w-64 lg:h-64 xl:w-72  xl:h-72 text-black bg-pine cursor-pointer flex items-center justify-center relative ">
             <MeIcon />
             <div className=" flex p-4 items-center flex-col text-lg justify-center text-white opacity-0 hover:opacity-100 bg-pattern3 w-full h-full absolute transition duration-700 ease-in">
               <blockquote>
@@ -121,7 +122,7 @@ const AboutMe = ({ className }: AboutProps) => {
               </span>
             </div>
           </div>
-          <div className="relative justify-center text-lg cursor-pointer  items-center flex-col flex text-black bg-prl3 w-72  px-4">
+          <div className="relative justify-center text-lg cursor-pointer  items-center flex-col flex text-black bg-prl3 w-80 h-80 md:w-96 md:h-96 lg:w-64 lg:h-64 xl:w-72  xl:h-72 px-4">
             <h1 className="font-semibold  my-4">Hi there!</h1>
             <p>
               I am Gyula Feigl, alias Pityubak with great interest in software
@@ -136,11 +137,11 @@ const AboutMe = ({ className }: AboutProps) => {
               </span>
             </div>
           </div>
-          <div className=" relative flex flex-col cursor-pointer justify-center items-center p-4  w-72 text-lg bg-red-900 text-white ">
-            <p>
-              If you want to hire me or you have any question, please contact
-              me:
-            </p>
+          <div className=" relative flex flex-col cursor-pointer justify-center items-center p-4 w-80 h-80 md:w-96 md:h-96  lg:w-64 lg:h-64 xl:w-72  xl:h-72 text-lg bg-red-900 text-white ">
+          <div className="flex items-center border rounded-full p-2 my-4">
+              <LocationIcon />
+              <p className="ml-2">Eger, Hungary</p>
+            </div>
             <div className="flex items-center border rounded-full p-2 my-4">
               <EmailIcon />
               <p className="ml-2">idpityubak@gmail.com</p>

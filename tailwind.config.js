@@ -1,4 +1,6 @@
 const colors = require("tailwindcss/colors")
+
+const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -36,13 +38,18 @@ module.exports = {
       zIndex: {
         "-1": "-1",
         100: "100",
+        150: "150",
       },
       ringColor: {
         badge: "#FFF05A",
       },
       screens: {
         portrait: { raw: "(orientation: portrait)" },
-        // => @media (orientation: portrait) { ... }
+        blg: "1400px",
+        ...defaultTheme.screens,
+      },
+      flex: {
+        split: " 0 0 21%",
       },
       borderColor: theme => ({
         exp: "#FFCF00",
@@ -90,6 +97,7 @@ module.exports = {
     extend: {
       textColor: ["disabled"],
       width: ["hover"],
+      backgroundImage: ["hover", "focus"],
     },
   },
   plugins: [],

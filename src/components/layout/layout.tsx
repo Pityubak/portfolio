@@ -6,6 +6,7 @@ import Footer from "../footer/footer"
 import Home from "../home/home"
 import Preloader from "../home/preloader"
 import Projects from "../projects/projects"
+import Animated from "./animated"
 import Header from "./header"
 import Wrapper from "./wrapper"
 
@@ -17,37 +18,17 @@ const Layout = () => {
   const dispatch = useAppDispatch()
 
   const callback = () => {
-    const direction = Math.round(Math.random() * 2)
-    const wrapperClass = `absolute w-full h-full  z-50 flex ${
-      direction === 1 && "flex-col"
-    } items-center`
     setContent(
       <div className="flex items-center w-full">
-        <div className="flex flex-col w-full rounded-lg shadow-lg overflow-hidden">
+        <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg overflow-hidden">
           <Header />
-          <div className="flex h-full w-full relative ">
-            <div className={wrapperClass}>
-              {index === 0 && (
-                <>
-                  {" "}
-                  <div className="h-full flex-1 bg-red-900 downSlide transform translate-y-125"></div>
-                  <div className="h-full flex-1  bg-yellow-900 upSlide transform -translate-y-125"></div>
-                  <div className="h-full flex-1  bg-green-900 downSlide transform translate-y-125"></div>
-                </>
-              )}
-              {index === 1 && (
-                <>
-                  {" "}
-                  <div className="h-full flex-1 bg-red-900 upSlide transform -translate-y-125"></div>
-                  <div className="h-full flex-1  bg-yellow-900 downSlide transform translate-y-125"></div>
-                  <div className="h-full flex-1  bg-green-900 upSlide transform -translate-y-125"></div>
-                </>
-              )}
-            </div>
+          {/* <Animated index={index}> */}
+          <div className="flex lg:h-full w-full relative ">
             {index === 0 && <Home className="" />}
             {index === 1 && <AboutMe className="" />}
             {index === 2 && <Projects className="" />}
           </div>
+          {/* </Animated> */}
           <Footer />
         </div>
       </div>

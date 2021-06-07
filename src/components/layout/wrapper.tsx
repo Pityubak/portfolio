@@ -1,5 +1,4 @@
 import * as React from "react"
-import Animated from "../../assets/shiny5.svg"
 
 
 type WrapperProps = {
@@ -8,10 +7,8 @@ type WrapperProps = {
 
 const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <div className=" relative flex md:items-center md:min-h-screen portrait:h-screen md:justify-center w-screen bg-pattern3">
-        {/* <Animated /> */}
-      <div className="flex  flex-col w-full md:w-8/12 md:items-center rounded-lg  z-50 overflow-hidden bg-shiny bg-cover">
-       
+    <div className=" relative flex lg:items-center min-h-screen portrait:min-h-screen lg:justify-center w-screen bg-pattern3">
+      <div className="flex  flex-col w-full   lg:w-10/12 blg:w-8/12 xl:w-9/12  md:items-center lg:rounded-lg  z-50 overflow-hidden bg-shiny bg-cover">
         {children}
       </div>
     </div>

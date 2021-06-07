@@ -36,14 +36,14 @@ circle {
   backface-visibility: hidden; */
 }
 .upSlide {
-  animation: upSlide 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+  animation: upSlide 2s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .downSlide {
-  animation: downSlide 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+  animation: downSlide 2s cubic-bezier(0.87, 0, 0.13, 1);
 }
 @keyframes upSlide {
   from {
-    transform: translateY(0);
+    transform: translateY(100%);
   }
   to {
     transform: translateY(-100%);
@@ -51,7 +51,7 @@ circle {
 }
 @keyframes downSlide {
   from {
-    transform: translateY(0);
+    transform: translateY(-100%);
   }
   to {
     transform: translateY(100%);

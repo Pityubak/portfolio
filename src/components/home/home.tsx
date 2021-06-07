@@ -141,10 +141,10 @@ const Home = ({ className }: HomeProps) => {
   const size: MinMaxPair = [width * 0.6 - 300, height * 0.6 - 200]
 
   return (
-    <div className={`flex  h-136 items-center  flex-1 ${className}`}>
+    <div className={`flex flex-col lg:flex-row  lg:h-136 h-full items-center  flex-1 ${className}`}>
       <Sidebar />
 
-      <div className=" flex  flex-1 h-full justify-center items-center ">
+      <div className=" flex lg:m-0 m-4 flex-1 lg:h-full justify-center items-center ">
         <div>
           <ReactWordcloud words={words} size={size} options={options} />
         </div>
