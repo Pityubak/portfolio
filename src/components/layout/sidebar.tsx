@@ -29,7 +29,7 @@ const Sidebar = () => {
     }, 10000)
   }, [])
   return (
-    <div className="lg:h-full w-full  lg:w-48 lg:border-none border-b">
+    <div className="lg:h-full w-full lg:my-0 my-4 lg:w-48 lg:border-none border-b">
       {cache && cache.position !== 0 && (
         <div className="w-full h-full   flex flex-col justify-center items-center">
           <div className="w-4/5 flex flex-col justify-center m-4 lg:shadow-2xl  items-center">
@@ -71,7 +71,9 @@ const Sidebar = () => {
           >
             <UpIcon />
           </button>
-          <div className={` lg:h-52 mt-8 lg:mt-0 lg:block flex flex-row flex-wrap lg:flex-nowrap justify-center lg:overflow-hidden relative `}>
+          <div
+            className={` lg:h-52 mt-8 lg:mt-0 lg:block flex flex-row flex-wrap lg:flex-nowrap justify-center lg:overflow-hidden relative `}
+          >
             {badges?.map(badge => {
               counter++
               return (
@@ -81,16 +83,26 @@ const Sidebar = () => {
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">
                     <div
+                      style={{
+                        backgroundImage:
+                          "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMTU3QTZFIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMyYjJiMmIiPjwvcGF0aD4KPC9zdmc+')",
+                      }}
                       className={`w-full bg-pattern4 bg-opacity-10 text-prl3 text-center text-primary rounded-t-md `}
                     >
-                      <span >Top {badge.rank}</span>
+                      <span>Top {badge.rank}</span>
+                    </div>
+                    <div className={`w-full  text-center bg-prl3   py-1`}>
+                      <span className="mt-1 font-bold text-badge ">
+                        {badge.language}
+                      </span>
                     </div>
                     <div
-                      className={`w-full  text-center bg-prl3   py-1`}
+                       style={{
+                        backgroundImage:
+                          'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIgIzI4MkMzNSI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PSIwLjQiPjwvcmVjdD4KPC9zdmc+")',
+                      }}
+                      className="w-full text-center  bg-pattern3 rounded-b-md  pt-1 pb-3"
                     >
-                      <span className="mt-1 font-bold text-badge ">{badge.language}</span>
-                    </div>
-                    <div className="w-full text-center  bg-pattern3 rounded-b-md  pt-1 pb-3">
                       <span>{badge.location_name}</span>
                     </div>
                   </div>

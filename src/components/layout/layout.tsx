@@ -22,13 +22,11 @@ const Layout = () => {
       <div className="flex items-center w-full">
         <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg overflow-hidden">
           <Header />
-          {/* <Animated index={index}> */}
           <div className="flex lg:h-full w-full relative ">
-            {index === 0 && <Home className="" />}
-            {index === 1 && <AboutMe className="" />}
-            {index === 2 && <Projects className="" />}
+            {index === 0 && <Home />}
+            {index === 1 && <AboutMe  />}
+            {index === 2 && <Projects  />}
           </div>
-          {/* </Animated> */}
           <Footer />
         </div>
       </div>

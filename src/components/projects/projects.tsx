@@ -3,13 +3,11 @@ import Card from "./card"
 import View from "./view"
 import Source from "./source"
 
-interface ProjectProps {
-  className: string
-}
 
-const Projects = ({ className }: ProjectProps) => {
+
+const Projects = () => {
   return (
-    <div className={`flex flex-1 items-center ${className}`}>
+    <div className={`flex flex-1 items-center `}>
       {/* <Sidebar />  */}
       <div
         className=" flex flex-1 w-full lg:h-136 flex-col items-center overflow-auto "
@@ -101,7 +99,7 @@ const Projects = ({ className }: ProjectProps) => {
               <Source href="https://github.com/Pityubak/XmlGrinder" />
             </div>
           }
-          description="You can use this tool to convert any class to xml and vice versa. Based on Liberator."
+          description="You can use this tool to serialize any class to xml and vice versa. Based on Liberator."
         />
         <Card
           web

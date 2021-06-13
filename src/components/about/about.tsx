@@ -82,12 +82,10 @@ const skillsData = [
   },
 ]
 
-interface AboutProps {
-  className: string
-}
-const AboutMe = ({ className }: AboutProps) => {
+
+const AboutMe = () => {
   return (
-    <div className={`flex flex-1  items-center ${className}`}>
+    <div className={`flex flex-1  items-center `}>
       <div className=" flex flex-1 w-full lg:h-136 flex-col items-center lg:overflow-y-auto  ">
         <div className=" w-full md:w-10/12 lg:w-9/12 md:px-10 sm:px-4 px-2 py-4 relative my-10  rounded-md">
           <h1 className="font-semibold text-center text-lg text-white mb-8 ">
@@ -138,11 +136,11 @@ const AboutMe = ({ className }: AboutProps) => {
             </div>
           </div>
           <div className=" relative flex flex-col cursor-pointer justify-center items-center p-4 w-80 h-80 md:w-96 md:h-96  lg:w-64 lg:h-64 xl:w-72  xl:h-72 text-lg bg-red-900 text-white ">
-          <div className="flex items-center border rounded-full p-2 my-4">
+          <div className="flex items-center  p-2 my-4">
               <LocationIcon />
               <p className="ml-2">Eger, Hungary</p>
             </div>
-            <div className="flex items-center border rounded-full p-2 my-4">
+            <div className="flex items-center  p-2 my-4">
               <EmailIcon />
               <p className="ml-2">idpityubak@gmail.com</p>
             </div>

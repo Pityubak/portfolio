@@ -1,17 +1,31 @@
 import * as React from "react"
-
-
+import Seo from "../seo"
 type WrapperProps = {
   children: React.ReactNode
 }
 
 const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <div className=" relative flex lg:items-center min-h-screen portrait:min-h-screen lg:justify-center w-screen bg-pattern3">
-      <div className="flex  flex-col w-full   lg:w-10/12 blg:w-8/12 xl:w-9/12  md:items-center lg:rounded-lg  z-50 overflow-hidden bg-shiny bg-cover">
-        {children}
+    <>
+      <Seo title="PityubakLand" />
+      <div
+        style={{
+          backgroundImage:
+            'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIgIzI4MkMzNSI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PSIwLjQiPjwvcmVjdD4KPC9zdmc+")',
+        }}
+        className=" relative flex lg:items-center min-h-screen portrait:min-h-screen lg:justify-center w-screen "
+      >
+        <div
+          style={{
+            backgroundImage:
+              'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iMTUwMCIgaGVpZ2h0PSIxMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB2aWV3Qm94PSIwIDAgMTUwMCAxMDAwIj48ZyBtYXNrPSJ1cmwoJnF1b3Q7I1N2Z2pzTWFzazEwNDImcXVvdDspIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iMTUwMCIgaGVpZ2h0PSIxMDAwIiB4PSIwIiB5PSIwIiBmaWxsPSJyZ2JhKDQzLCA0MywgNDMsIDEpIj48L3JlY3Q+PHBhdGggZD0iTTAsNDc4LjQ2MkMxMDYuMjMzLDQ3NS43ODMsMjE1LjkzMyw1MzAuNzY0LDMxMi4yNTUsNDg1Ljg3OEM0MTEuOTg4LDQzOS40MDIsNDY5LjQ4OSwzMzUuMyw1MTguNTUxLDIzNi44MTRDNTY4LjkyOCwxMzUuNjg3LDYwNS4wNTUsMjYuODUyLDU5Ny4wNjQsLTg1Ljg0NUM1ODguNzE4LC0yMDMuNTQ2LDU2OS44NywtMzQyLjY0Nyw0NzIuNzEzLC00MDkuNjA4QzM3NC4zMDcsLTQ3Ny40MywyNDAuMzYxLC00MDEuNjAyLDEyMS40NTQsLTQxMy42MzZDMzEuMzMyLC00MjIuNzU3LC00OS4wMzUsLTQ4Ni4wNTUsLTEzOC40MzMsLTQ3MS40NThDLTIzMi45MDEsLTQ1Ni4wMzMsLTMyNC45MTEsLTQwNy44ODUsLTM4Mi40MTMsLTMzMS4zNjNDLTQzOC41MzIsLTI1Ni42OCwtNDMzLjEzMiwtMTU2LjYzNywtNDQ0LjY2MSwtNjMuOTMzQy00NTUuOTU5LDI2LjkxNSwtNDY4LjQ0NCwxMTUuNjIzLC00NDkuMTMxLDIwNS4xMTFDLTQyNS45NzMsMzEyLjQxMiwtNDE2LjMxNCw0NDQuODE4LC0zMjIuNTQ0LDUwMS44ODlDLTIyOC41NTcsNTU5LjA5MiwtMTA5Ljk5MSw0ODEuMjM2LDAsNDc4LjQ2MiIgZmlsbD0iIzIyMjIyMiI+PC9wYXRoPjxwYXRoIGQ9Ik0xNTAwIDE1NTEuODExMDAwMDAwMDAwMUMxNjI1Ljk2NCAxNTg2LjYxNCAxNzYyLjcgMTY0Ny44OTQgMTg4MS43NzkgMTU5NC4wNTkgMjAwMi4zMDcgMTUzOS41NjkgMjA4MS42NjUgMTQwNy4wODUgMjEwNy4yMDEgMTI3Ny4zIDIxMzEuMDc0IDExNTUuOTcgMjAyNi4zODA5OTk5OTk5OTk5IDEwNDkuMTY1IDIwMTMuMTg0IDkyNi4yMTUgMTk5OS4yMzEgNzk2LjIxOCAyMTA2LjcyOCA2NDYuODM0MDAwMDAwMDAwMSAyMDI4LjMwMjAwMDAwMDAwMDEgNTQyLjIyMzk5OTk5OTk5OTkgMTk1MS4wNjMgNDM5LjE5OCAxNzg3LjI5MSA0NzQuNDk1IDE2NTkuOTk1IDQ1NS4xMDc5OTk5OTk5OTk5NSAxNTUwLjM1OSA0MzguNDEwOTk5OTk5OTk5OTQgMTQ0MC41NSA0MDMuOTI5IDEzMzQuNTYyIDQzNi41NzAwMDAwMDAwMDAwNSAxMjI5LjIzNCA0NjkuMDA4MDAwMDAwMDAwMDQgMTE2Mi40NDkgNTYzLjUxOSAxMDc4LjAwOSA2MzQuMzQzMDAwMDAwMDAwMSA5NzUuNDU0IDcyMC4zNjEgNzkxLjkzOCA3NjMuNTU2IDc4NS4zMjMgODk3LjI0NSA3NzguNDkzIDEwMzUuMjgzIDk1OS4yOTcgMTEwMS4xMjMgMTA0OS43NDMgMTIwNS42MjUgMTExMS43MzEgMTI3Ny4yNDcgMTE1OC4yNjQwMDAwMDAwMDAxIDEzNTcuMTcgMTIzMy4zNTYgMTQxNC45MDYgMTMxNC4yMDEgMTQ3Ny4wNjQgMTQwMS43MDUgMTUyNC42NTMgMTUwMCAxNTUxLjgxMTAwMDAwMDAwMDEiIGZpbGw9IiMzNDM0MzQiPjwvcGF0aD48L2c+PGRlZnM+PG1hc2sgaWQ9IlN2Z2pzTWFzazEwNDIiPjxyZWN0IHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNmZmZmZmYiPjwvcmVjdD48L21hc2s+PC9kZWZzPjwvc3ZnPg==")',
+          }}
+          className="flex  flex-col w-full   lg:w-10/12 blg:w-8/12 xl:w-9/12  md:items-center lg:rounded-lg  z-50 overflow-hidden bg-shiny bg-cover"
+        >
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

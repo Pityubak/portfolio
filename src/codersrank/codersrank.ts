@@ -15,14 +15,11 @@ const cache: CacheProps = {
 Promise.all([query(endpoint), query(badgesEndpoint), query(langEndpoint)])
   .then(data => {
     cache.user = data[0]
-    cache.badges = data[1].badges
+    cache.badges = data[1]?.badges
     cache.langs = data[2]
     //.filter((badge:BadgeProps) => badge.rank < 100)
-    cache.score = Math.floor(data[0].total_score)
-    cache.position = Math.ceil(100 / (data[0].total_users / data[0].position))
-    console.log("User", data[0])
-    console.log("Badges", data[1].badges)
-    console.log("Langs", data[2])
+    cache.score = Math.floor(data[0]?.total_score)
+    cache.position = Math.ceil(100 / (data[0]?.total_users / data[0]?.position))
   })
   .catch(e => {
     console.error("Error", e)
