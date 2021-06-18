@@ -1,5 +1,5 @@
 import "./src/styles/global.css"
-// import "./src/styles/background.css"
+import "css-doodle"
 import React from "react"
 import { Provider } from "react-redux"
 import { store } from "./src/slices/store"

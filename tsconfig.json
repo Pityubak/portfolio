@@ -13,5 +13,11 @@
     "noUnusedParameters": true,
     "removeComments": false
   },
-  "include": ["./src/**/*","svg.d.ts","codersrank.d.ts","skills.d.ts"]
+  "include": [
+    "./src/**/*",
+    "svg.d.ts",
+    "codersrank.d.ts",
+    "skills.d.ts",
+    "doodle.d.ts"
+  ]
 }

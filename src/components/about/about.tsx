@@ -91,7 +91,6 @@ const AboutMe = () => {
           <h1 className="font-semibold text-center text-lg text-white mb-8 ">
             My skills
           </h1>
-          {/* <SkillBars skills={skillsData} barsHeight={20} /> */}
           <div className="flex flex-wrap w-full justify-around  items-center bg-white bg-opacity-10">
             {skillsData.map(skill => {
               return (

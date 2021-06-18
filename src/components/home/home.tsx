@@ -132,20 +132,23 @@ const options: Optional<Options> = {
   rotationAngles: [-90, 0],
 }
 
-
 const Home = () => {
   const { width, height } = useWindowSize()
   const size: MinMaxPair = [width * 0.6 - 300, height * 0.6 - 200]
 
   return (
-    <div className={`flex flex-col lg:flex-row  lg:h-136 h-full items-center  flex-1 `}>
+    <div
+      className={`flex flex-col lg:flex-row  lg:h-136 h-full items-center  flex-1 `}
+    >
       <Sidebar />
 
-      <div className="lg:my-0 my-12 flex lg:m-0 m-4 flex-1 lg:h-full justify-center items-center ">
-        <div>
-          <ReactWordcloud words={words} size={size} options={options} />
+      {width > 768 && (
+        <div className="lg:my-0 my-12 hidden md:flex lg:m-0 m-4 flex-1 lg:h-full justify-center items-center ">
+          <div>
+            <ReactWordcloud words={words} size={size} options={options} />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
