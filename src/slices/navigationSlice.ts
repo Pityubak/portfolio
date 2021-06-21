@@ -3,13 +3,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 interface CounterState {
   index: number
   firstRun: boolean
-  sidebarCount:boolean
+  sidebarCount: boolean
 }
 
 const initialState: CounterState = {
   index: 0,
   firstRun: true,
-  sidebarCount:true
+  sidebarCount: true,
 }
 
 const navigationSlice = createSlice({
@@ -22,12 +22,13 @@ const navigationSlice = createSlice({
     triggerOffPreloader: state => {
       state.firstRun = false
     },
-    countAnimationOff:state=>{
-      state.sidebarCount=false
-    }
+    countAnimationOff: state => {
+      state.sidebarCount = false
+    },
   },
 })
 
 export const navigationReducer = navigationSlice.reducer
 
-export const { pageIndexChange, triggerOffPreloader,countAnimationOff } = navigationSlice.actions
+export const { pageIndexChange, triggerOffPreloader, countAnimationOff } =
+  navigationSlice.actions

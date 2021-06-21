@@ -65,7 +65,6 @@ const Sidebar = () => {
             disabled={translateAmount === 0}
             onClick={() => {
               setTranslateAmount((translateAmount - 50) % 150)
-              // recreateBadgeArray()
             }}
             className="hidden lg:block disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
@@ -92,9 +91,7 @@ const Sidebar = () => {
                         {badge.language}
                       </span>
                     </div>
-                    <div
-                      className="w-full text-center bg-white bg-opacity-10  rounded-b-md  pt-1 pb-3"
-                    >
+                    <div className="w-full text-center bg-white bg-opacity-10  rounded-b-md  pt-1 pb-3">
                       <span>{badge.location_name}</span>
                     </div>
                   </div>

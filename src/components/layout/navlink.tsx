@@ -13,7 +13,7 @@ interface DoodleType extends Element {
 }
 
 const NavLink = ({ icon, text, selected }: NavLinkProps) => {
-  const   dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
   const { index } = useAppSelector(state => state.navigation)
 
   const doodle: DoodleType | null =

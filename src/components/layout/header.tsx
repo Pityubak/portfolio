@@ -33,7 +33,7 @@ const Header = () => {
         <div className=" lg:flex justify-end hidden lg:w-4/5 xl:w-3/5 z-50 ">
           <NavLink icon={<HomeIcon />} text="Home" selected={0} />
           <NavLink icon={<UserIcon />} text="About me" selected={1} />
-          <NavLink icon={<WorkIcon />} text="Home" selected={2} />
+          <NavLink icon={<WorkIcon />} text="Projects" selected={2} />
         </div>
         <div className="flex justify-end z-50 w-1/2 lg:hidden relative">
           <button

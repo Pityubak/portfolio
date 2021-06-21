@@ -1,5 +1,4 @@
 import * as React from "react"
-import useInterval from "../hooks/useInterval"
 
 interface CircleProps {
   radius: number
@@ -10,7 +9,7 @@ interface CircleProps {
 }
 const Circle = ({ radius, color, stroke, limit, text }: CircleProps) => {
   const [progress, setProgress] = React.useState(0)
-    
+
   React.useEffect(() => {
     setTimeout(() => {
       if (progress !== limit) {

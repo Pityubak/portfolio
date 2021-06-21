@@ -5,7 +5,7 @@ import { skillReducer } from "./skillSlice"
 export const store = configureStore({
   reducer: {
     navigation: navigationReducer,
-    skill:skillReducer
+    skill: skillReducer,
   },
 })
 

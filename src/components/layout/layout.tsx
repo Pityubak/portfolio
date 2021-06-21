@@ -10,25 +10,7 @@ import Projects from "../projects/projects"
 import Header from "./header"
 import Wrapper from "./wrapper"
 
-const HoverDoodle = Doodle`
-// :doodle { 
-//   @grid: 10 / 100%; 
-//   perspective: 35em;
-// }
 
-// --s: calc(@row() + @col() - 2);
-// --delay: calc(var(--s) * -.1s); 
-
-
-// background: #3c3cd3;
-// // animation: r 3s ease-in-out var(--delay) ;
-// margin: .4vmin;
-
-// //  @keyframes r { 
-// //   to {;
-// //   opacity:0; } 
-// // }  
-`
 const Layout = () => {
   const [content, setContent] = React.useState<React.ReactNode | null>(
     <Preloader />
@@ -42,7 +24,6 @@ const Layout = () => {
         <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg overflow-hidden">
           <Header />
           <div className="flex lg:h-full w-full relative ">
-         
             {index === 0 && <Home />}
             {index === 1 && <AboutMe />}
             {index === 2 && <Projects />}

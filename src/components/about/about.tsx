@@ -82,7 +82,6 @@ const skillsData = [
   },
 ]
 
-
 const AboutMe = () => {
   return (
     <div className={`flex flex-1  items-center `}>
@@ -135,7 +134,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className=" relative flex flex-col cursor-pointer justify-center items-center p-4 w-80 h-80 md:w-96 md:h-96  lg:w-64 lg:h-64 xl:w-72  xl:h-72 text-lg  text-white ">
-          <div className="flex items-center  p-2 my-4">
+            <div className="flex items-center  p-2 my-4">
               <LocationIcon />
               <p className="ml-2">Eger, Hungary</p>
             </div>
@@ -146,7 +145,7 @@ const AboutMe = () => {
             <div className=" flex p-4 items-center flex-col text-lg justify-center text-white opacity-0 hover:opacity-100 bg-pattern3 w-full h-full absolute transition duration-700 ease-in">
               <blockquote>“Talk is cheap. Show me the code.”</blockquote>
               <span className="font-semibold mt-2 text-yellow-500">
-              – Linus Torvalds
+                – Linus Torvalds
               </span>
             </div>
           </div>

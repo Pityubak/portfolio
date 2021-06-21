@@ -13,8 +13,12 @@ const Footer = () => (
       >
         <GithubIcon />
       </a>
-      <a href="https://profile.codersrank.io/user/pityubak/" rel="noreferrer" target="_blank">
-        <CoderrankIcon />{" "}
+      <a
+        href="https://profile.codersrank.io/user/pityubak/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <CoderrankIcon />
       </a>
     </div>
   </div>

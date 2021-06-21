@@ -11,9 +11,6 @@ interface CardProps {
 const Card = ({ title, description, chips, links }: CardProps) => {
   return (
     <div className=" my-8   rounded-sm flex text-black w-11/12 sm:w-10/12 md:w-8/12  shadow-2xl relative ">
-      {/* <div className="absolute shadow-2xl -p-4  bg-pattern3 w-full flex items-center justify-center  h-full transition duration-700 ease-in-out opacity-0 hover:opacity-100">
-        {links}
-      </div> */}
       <div
         className={` bg-white border border-gray-900 bg-opacity-10 text-prl3 flex-1`}
       >

@@ -1,8 +1,0 @@
-<svg xmlns='http://www.w3.org/2000/svg'
-    xmlns:xlink='http://www.w3.org/1999/xlink' >
-    <filter id='n'>
-        <feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='10' stitchTiles='stitch'/>
-    </filter>
-    <rect fill='#164E63'/>
-    <rect  filter="url(#n)" opacity='0.4'/>
-</svg>

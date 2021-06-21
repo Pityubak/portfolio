@@ -29,7 +29,7 @@ circle {
   transform-origin: 50% 50%;
 }
 
-.upSlide {
+/* .upSlide {
   animation: upSlide 2s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .downSlide {
@@ -50,8 +50,7 @@ circle {
   to {
     transform: translateY(100%);
   }
-}
-.mobileLink{
+} */
+.mobileLink {
   @apply px-8 py-2 mt-8  hover:bg-active hover:text-prl3 transition duration-500 ease-in-out flex items-center font-semibold   text-prl3;
 }
-

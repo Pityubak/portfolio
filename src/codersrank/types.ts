@@ -17,5 +17,5 @@ export interface CacheProps {
   badges: Array<BadgeProps> | null
   score: number
   position: number
-  langs: Object 
+  langs: Object
 }
