@@ -4,70 +4,36 @@ import UserIcon from "../../assets/user.svg"
 import WorkIcon from "../../assets/work.svg"
 import MenuIcon from "../../assets/menu.svg"
 import CloseIcon from "../../assets/close.svg"
-import { useAppDispatch, useAppSelector } from "../../slices/hooks"
+import { useAppDispatch } from "../../slices/hooks"
 import { pageIndexChange } from "../../slices/navigationSlice"
-
-interface DoodleType extends Element {
-  update: () => void
-}
+import NavLink from "./navlink"
 
 const Header = () => {
   const dispatch = useAppDispatch()
-  const { index } = useAppSelector(state => state.navigation)
-  const doodle: DoodleType | null =
-  typeof document !== "undefined" ? document?.querySelector("css-doodle") : null
+
   const [hidden, setHidden] = React.useState(true)
 
   const togglePanel = () => {
     setHidden(() => !hidden)
   }
+
+  const navigateBetweenPages = (index: number) => {
+    togglePanel()
+    dispatch(pageIndexChange(index))
+  }
+
   return (
     <>
       <header className="shadow-2xl w-full h-12 flex relative z-100">
         <div className="absolute w-full h-full filter  bg-white   bg-opacity-10 z-0"></div>
-        <h1 className="text-primary ml-4 font-bold text-xl  w-1/2 md:text-2xl p-2">
+        <h1 className="text-prl3 ml-4 font-bold text-xl  w-1/2 md:text-2xl p-2">
           Pityubak
         </h1>
 
         <div className=" lg:flex justify-end hidden lg:w-4/5 xl:w-3/5 z-50 ">
-          <button
-            onClick={() => {
-              dispatch(pageIndexChange(0))
-              doodle?.update()
-            }}
-            className={`px-8 ${
-              index === 0 && "bg-active"
-            } hover:bg-gray-600 hover:text-prl3 transition duration-500 ease-in-out flex items-center font-semibold   text-primary`}
-          >
-            <HomeIcon />
-            Home
-          </button>
-
-          <button
-            onClick={() => {
-              dispatch(pageIndexChange(1))
-              doodle?.update()
-            }}
-            className={`px-8 ${
-              index === 1 && "bg-active"
-            }  hover:bg-gray-600  transition duration-500 ease-in-out flex items-center font-semibold  text-primary`}
-          >
-            <UserIcon />
-            About me
-          </button>
-
-          <button
-            onClick={() => {
-              dispatch(pageIndexChange(2))
-              doodle?.update()
-            }}
-            className={`px-8 ${
-              index === 2 && "bg-active"
-            } hover:bg-gray-600 transition duration-500 ease-in-out flex items-center font-semibold   text-primary`}
-          >
-            <WorkIcon />
-            Projects
-          </button>
+          <NavLink icon={<HomeIcon />} text="Home" selected={0} />
+          <NavLink icon={<UserIcon />} text="About me" selected={1} />
+          <NavLink icon={<WorkIcon />} text="Home" selected={2} />
         </div>
         <div className="flex justify-end z-50 w-1/2 lg:hidden relative">
           <button
@@ -82,7 +48,7 @@ const Header = () => {
         className={`${
           hidden
             ? "hidden"
-            : "flex flex-col fixed w-full h-screen bg-pattern z-150 justify-center items-center"
+            : "flex flex-col fixed w-full h-screen bg-badge z-150 justify-center items-center"
         }`}
       >
         <button
@@ -91,35 +57,17 @@ const Header = () => {
         >
           <CloseIcon />
         </button>
-        <button
-          onClick={() => {
-            dispatch(pageIndexChange(0))
-            togglePanel()
-          }}
-          className={`px-8 py-2 mt-8  hover:bg-active hover:text-prl3 transition duration-500 ease-in-out flex items-center font-semibold   text-primary`}
-        >
+        <button onClick={() => navigateBetweenPages(0)} className="mobileLink">
           <HomeIcon />
           Home
         </button>
 
-        <button
-          onClick={() => {
-            dispatch(pageIndexChange(1))
-            togglePanel()
-          }}
-          className={`px-8 py-2 mt-8  hover:bg-active transition duration-500 ease-in-out flex items-center font-semibold  text-primary`}
-        >
+        <button onClick={() => navigateBetweenPages(1)} className="mobileLink">
           <UserIcon />
           About me
         </button>
 
-        <button
-          onClick={() => {
-            dispatch(pageIndexChange(2))
-            togglePanel()
-          }}
-          className={`px-8 py-2 mt-8 hover:bg-active transition duration-500 ease-in-out flex items-center font-semibold   text-primary`}
-        >
+        <button onClick={() => navigateBetweenPages(2)} className="mobileLink">
           <WorkIcon />
           Projects
         </button>

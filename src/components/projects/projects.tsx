@@ -3,21 +3,16 @@ import Card from "./card"
 import View from "./view"
 import Source from "./source"
 
-
-
 const Projects = () => {
   return (
     <div className={`flex flex-1 items-center `}>
       {/* <Sidebar />  */}
-      <div
-        className=" flex flex-1 w-full lg:h-136 flex-col items-center overflow-auto "
-      >
+      <div className=" flex flex-1 w-full lg:h-136 flex-col items-center overflow-auto ">
         <h1 className="font-semibold text-center text-lg text-prl3 my-8 ">
           My projects
         </h1>
         <Card
           chips={["Gatsby", "React Redux", "MDB React", "styled-components"]}
-          web
           title="elszamolas2000bt.hu"
           description="Static website of a local(Eger, Hungary) accounting firm with an accounting fee calculator. "
           links={
@@ -44,7 +39,6 @@ const Projects = () => {
             "styled-components",
             "Leaflet",
           ]}
-          web
           title="jrtech.hu"
           links={
             <div className="flex w-full items-center justify-center">
@@ -81,7 +75,6 @@ const Projects = () => {
             "Lombok",
             "amCharts4",
           ]}
-          web
           links={
             <div className="flex w-full items-center  justify-center">
               <View href="http://leaders-of-the-world.surge.sh/" text="Demo" />
@@ -102,7 +95,6 @@ const Projects = () => {
           description="You can use this tool to serialize any class to xml and vice versa. Based on Liberator."
         />
         <Card
-          web
           chips={[
             "Gatsby",
             "React Redux",

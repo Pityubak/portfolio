@@ -10,7 +10,12 @@ interface SeoProps {
   title: string
 }
 
-function Seo({ description = "Awesome portfolio of Pityubak", lang = "en", meta = [], title }: SeoProps) {
+function Seo({
+  description = "Awesome portfolio of Pityubak",
+  lang = "en",
+  meta = [],
+  title,
+}: SeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,6 +38,7 @@ function Seo({ description = "Awesome portfolio of Pityubak", lang = "en", meta 
       htmlAttributes={{
         lang,
       }}
+      link={[{ rel: "canonical", href: "https://pityubak.ml" }]}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={[

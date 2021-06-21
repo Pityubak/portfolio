@@ -5,9 +5,9 @@ type SourceProps = {
   href: string
 }
 const Source = ({ href }: SourceProps) => (
-  <a href={href} className="flex transition ease-in duration:500 hover:text-yellow-500 items-center flex-col m-2 p-2 text-white">
+  <a href={href} className="flex transition ease-in duration:500 transform-gpu hover:scale-110 items-center flex-col m-2 p-2 text-black">
     <CodeIcon />
-    <span>Source code</span>
+    <span className="font-semibold">Source code</span>
   </a>
 )
 

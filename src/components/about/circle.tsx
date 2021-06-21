@@ -10,12 +10,7 @@ interface CircleProps {
 }
 const Circle = ({ radius, color, stroke, limit, text }: CircleProps) => {
   const [progress, setProgress] = React.useState(0)
-
-  // useInterval(() => {
-  //   if (progress !== limit) {
-  //     setProgress(progress + 5)
-  //   }
-  // }, 80)
+    
   React.useEffect(() => {
     setTimeout(() => {
       if (progress !== limit) {

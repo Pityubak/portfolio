@@ -10,15 +10,24 @@ import Projects from "../projects/projects"
 import Header from "./header"
 import Wrapper from "./wrapper"
 
+const HoverDoodle = Doodle`
+// :doodle { 
+//   @grid: 10 / 100%; 
+//   perspective: 35em;
+// }
 
-const LeftDoodle=Doodle`
-@grid: 16 / 100%;
+// --s: calc(@row() + @col() - 2);
+// --delay: calc(var(--s) * -.1s); 
 
-@size: 1px calc(141.4% + 1px);
-transform: rotate(@p(±45deg));
-background: #157A6E;
-margin: auto;
 
+// background: #3c3cd3;
+// // animation: r 3s ease-in-out var(--delay) ;
+// margin: .4vmin;
+
+// //  @keyframes r { 
+// //   to {;
+// //   opacity:0; } 
+// // }  
 `
 const Layout = () => {
   const [content, setContent] = React.useState<React.ReactNode | null>(
@@ -33,10 +42,10 @@ const Layout = () => {
         <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg overflow-hidden">
           <Header />
           <div className="flex lg:h-full w-full relative ">
-            {/* <div className="absolute top-0 left-0 w-1 h-full -z-1 -mx-4"><LeftDoodle /></div> */}
+         
             {index === 0 && <Home />}
-            {index === 1 && <AboutMe  />}
-            {index === 2 && <Projects  />}
+            {index === 1 && <AboutMe />}
+            {index === 2 && <Projects />}
           </div>
           <Footer />
         </div>
