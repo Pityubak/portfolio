@@ -64,7 +64,7 @@ const Sidebar = () => {
           <button
             disabled={translateAmount === 0}
             onClick={() => {
-              setTranslateAmount((translateAmount - 50) % 150)
+              setTranslateAmount((translateAmount - 50) % 100)
             }}
             className="hidden lg:block disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
@@ -100,9 +100,9 @@ const Sidebar = () => {
             })}
           </div>
           <button
-            disabled={translateAmount === 100}
+            disabled={translateAmount === 50}
             onClick={() => {
-              setTranslateAmount((translateAmount + 50) % 150)
+              setTranslateAmount((translateAmount + 50) % 100)
             }}
             className=" hidden lg:block text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >

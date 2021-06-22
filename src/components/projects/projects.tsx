@@ -14,7 +14,7 @@ const Projects = () => {
         <Card
           chips={["Gatsby", "React Redux", "MDB React", "styled-components"]}
           title="elszamolas2000bt.hu"
-          description="Static website of a local(Eger, Hungary) accounting firm with an accounting fee calculator. "
+          description="Static website of a local accounting firm with an accounting fee calculator. "
           links={
             <div className="flex w-full items-center justify-center">
               <View href="https://elszamolas2000bt.hu" text="View" />
@@ -45,7 +45,7 @@ const Projects = () => {
               <View href="https://jrtech.hu" text="View" />
             </div>
           }
-          description="Static website of Jobbik Richárd (sole proprietor) and his company. He provides ventilation technology, implementation and metal industry production services. "
+          description="Static website of Jobbik Richárd  and his company. He provides ventilation technology, implementation and metal industry production services. "
         />
         <Card
           chips={["C#", "WinApi", "WinForms"]}
@@ -113,7 +113,7 @@ const Projects = () => {
             </div>
           }
           title="Fantastic Fashion"
-          description="Woocommerce based webshop demo with GraphQL, authentication. Note: Due to the free subscription, the first query takes more time than usual, so be patient."
+          description="Woocommerce based webshop demo with GraphQL, and authentication. Note: Due to the free subscription, the first query takes more time than usual, so be patient."
         />
         <Card
           chips={["Annotation Processor", "Pojo"]}
@@ -123,7 +123,7 @@ const Projects = () => {
             </div>
           }
           title="PojoGenerator"
-          description="Annotation processor, which creates getter,setter and constructor, here my goal was a deeper understanding and learning."
+          description="Annotation processor, which creates gette, setter and constructor, here my goal was a deeper understanding and learning."
         />
       </div>
     </div>

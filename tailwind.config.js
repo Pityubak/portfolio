@@ -5,7 +5,12 @@ module.exports = {
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
     options: {
-      safelist: ["/^bg-pattern/"],
+      safelist: [
+        "/^bg-pattern/",
+        "-translate-y-0",
+        "-translate-y-100",
+        "-translate-y-50",
+      ],
     },
   },
   darkMode: false, // or 'media' or 'class'
@@ -25,7 +30,7 @@ module.exports = {
         ...theme("colors"),
 
         pine: "#157A6E",
-        
+
         badge: "#2B2B2B",
         prl3: "#D3D5D4",
         active: "#6F4983",
@@ -56,14 +61,13 @@ module.exports = {
         prl3: "#D3D5D4",
         active: "#6F4983",
         hover: "#F3FFB6",
-        pineDark:"#0F574F",
+        pineDark: "#0F574F",
       }),
       backgroundImage: theme => ({
-        shiny: "url(/bg-shiny.svg)", 
-        pattern3: "url(/bg-pattern3.svg)", 
+        shiny: "url(/bg-shiny.svg)",
+        pattern3: "url(/bg-pattern3.svg)",
         pattern4: "url(/bg-pattern4.svg)",
-  
-       }),
+      }),
     },
   },
   variants: {
