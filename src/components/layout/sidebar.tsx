@@ -78,8 +78,8 @@ const Sidebar = () => {
               return (
                 <div
                   key={badge.language + counter}
-                  className={`text-sm h-32 lg:h-20 w-20 lg:my-4 mx-4 relative transition duration-700 ease-in-out transform  lg:${
-                    translateAmount === 0 ? "-translate-y-0" : "-translate-y-50"
+                  className={`text-sm h-32 lg:h-20 w-20 lg:my-4 mx-4 relative transition duration-700 ease-in-out transform  ${
+                    translateAmount === 0 ? "lg:-translate-y-0" : "lg:-translate-y-50"
                   }`}
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">

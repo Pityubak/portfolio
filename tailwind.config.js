@@ -8,7 +8,6 @@ module.exports = {
       safelist: [
         "/^bg-pattern/",
         "-translate-y-0",
-        "-translate-y-100",
         "-translate-y-50",
       ],
     },
