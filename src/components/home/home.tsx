@@ -22,10 +22,6 @@ const words = [
     value: 90,
   },
   {
-    text: "S.O.L.I.D",
-    value: 65,
-  },
-  {
     text: "Spring",
     value: 80,
   },
@@ -96,10 +92,6 @@ const words = [
   {
     text: "Axios",
     value: 50,
-  },
-  {
-    text: "Rest",
-    value: 80,
   },
   {
     text: "Design Patterns",

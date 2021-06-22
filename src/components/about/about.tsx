@@ -16,7 +16,7 @@ const skillsData = [
     color: "#7CB4B8",
   },
   {
-    name: "ReactJS",
+    name: "React",
     level: 55,
     color: "#A9714B",
   },
