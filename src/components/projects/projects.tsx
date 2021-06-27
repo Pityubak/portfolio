@@ -123,7 +123,7 @@ const Projects = () => {
             </div>
           }
           title="PojoGenerator"
-          description="Annotation processor, which creates gette, setter and constructor, here my goal was a deeper understanding and learning."
+          description="Annotation processor, which creates getter, setter and constructor, here my goal was a deeper understanding and learning."
         />
       </div>
     </div>
