@@ -10,24 +10,23 @@ type WrapperProps = {
 }
 
 const BgDoodle = Doodle`
-@grid: 1x24 / 50%;
-@place-cell: center;
-@size: calc(@i * 5%);
-border-style: dotted;
-border-width: calc(@i * 2px);
-border-color: #157A6E;
-border-radius: 999px;
-opacity: calc(@i() * 0.02);
-transform: rotate(@r(360deg));
-animation: spin calc(@index() * 7s) cubic-bezier(0.83, 0, 0.17, 1) ;
 
---f: @rand(360deg);
---t: calc(var(--f) + @pick(1turn, -1turn));
-
-@keyframes spin {
-from { transform: rotate(var(--f)) }
-to { transform: rotate(var(--t)) }
+:doodle { 
+  @grid: 20x1 / 50%; 
+  --deg: @rand(-25deg, 23deg);
 }
+
+transition: @rand(.3s, .6s, .01) ease @rand(.6s);
+will-change: transform;
+
+
+@place-cell: center;
+@size: 100%;
+
+border-radius: 50%;
+border: 2px solid #157A6E;
+transform: rotate(calc(@index() * var(--deg)));
+transform-origin: 0 center;
 `
 
 const Wrapper = ({ children }: WrapperProps) => {
@@ -56,6 +55,7 @@ const Wrapper = ({ children }: WrapperProps) => {
   React.useEffect(() => {
     setTimeout(callback, firstRun ? 5000 : 0)
   }, [index, firstRun])
+
   return (
     <>
       <Seo title="PityubakLand" />
