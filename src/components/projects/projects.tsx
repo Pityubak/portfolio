@@ -69,7 +69,7 @@ const Projects = () => {
             "styled-components",
             "Spring Boot",
             "GraphQL",
-            "Apollo",
+            "Apollo",                                                                     
             "JPA",
             "PostgreSQL",
             "Lombok",
