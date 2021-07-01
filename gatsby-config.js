@@ -3,6 +3,7 @@ module.exports = {
     title: `Pityubak's portfolio`,
     description: `Awesome portfolio of Pityubak`,
     author: `@pityubak`,
+    siteUrl: "https://www.pityubak.ml/",
   },
   plugins: [
     `gatsby-plugin-preact`,
@@ -28,6 +29,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-robots-txt",
     "gatsby-plugin-postcss",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

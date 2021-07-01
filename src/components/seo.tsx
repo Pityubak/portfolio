@@ -14,7 +14,7 @@ function Seo({
   description = "Awesome portfolio of Pityubak",
   lang = "en",
   meta = [],
-  title,
+  title
 }: SeoProps) {
   const { site } = useStaticQuery(
     graphql`
@@ -75,7 +75,9 @@ function Seo({
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+  
+    </Helmet>
   )
 }
 

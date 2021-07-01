@@ -58,7 +58,7 @@ const Wrapper = ({ children }: WrapperProps) => {
 
   return (
     <>
-      <Seo title="PityubakLand" />
+      <Seo title="PityubakLand"  />
       <div className="bg-base relative flex lg:items-center min-h-screen portrait:min-h-screen lg:justify-center w-screen ">
         {content}
       </div>
