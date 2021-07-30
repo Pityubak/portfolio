@@ -1,6 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
-
 module.exports = {
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx,svg}"],
@@ -23,6 +22,8 @@ module.exports = {
         50: "12.5rem",
         100: "25rem",
         150: "37.5rem",
+        200: "50rem",
+        250: "62.5rem",
         136: "34.5rem",
       },
 
