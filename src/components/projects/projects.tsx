@@ -14,7 +14,7 @@ const Projects = () => {
         <Card
           chips={["Gatsby", "React Redux", "MDB React", "styled-components"]}
           title="elszamolas2000bt.hu"
-          description="Static website of a local accounting firm with an accounting fee calculator. "
+          description="Static website of a local accountancy firm with an accounting fee calculator.  "
           links={
             <div className="flex w-full items-center justify-center">
               <View href="https://elszamolas2000bt.hu" text="View" />
@@ -45,7 +45,7 @@ const Projects = () => {
               <View href="https://jrtech.hu" text="View" />
             </div>
           }
-          description="Static website of Jobbik Richárd  and his company. He provides ventilation technology, implementation and metal industry production services. "
+          description="Static website of Richard Jobbik and his company. Provides ventilation engineering, construction and metal fabrication services.  "
         />
         <Card
           chips={["C#", "WinApi", "WinForms"]}
@@ -69,7 +69,7 @@ const Projects = () => {
             "styled-components",
             "Spring Boot",
             "GraphQL",
-            "Apollo",                                                                     
+            "Apollo",
             "JPA",
             "PostgreSQL",
             "Lombok",
@@ -82,7 +82,7 @@ const Projects = () => {
             </div>
           }
           title="leaders-of-worlds"
-          description="You can add leaders to map of the world. Note: Due to the free subscription, the first query takes more time than usual, so be patient."
+          description="You can add leaders to the world map. Note: Due to the free subscription, the first query will take longer than usual, so please be patient."
         />
         <Card
           chips={["Liberator", "Xml", "Serialization"]}
@@ -113,7 +113,7 @@ const Projects = () => {
             </div>
           }
           title="Fantastic Fashion"
-          description="Woocommerce based webshop demo with GraphQL, and authentication. Note: Due to the free subscription, the first query takes more time than usual, so be patient."
+          description="Woocommerce based webshop demo with GraphQL, and authentication. Note: Due to the free subscription, the first query takes more time than usual, so please be patient."
         />
         <Card
           chips={["Annotation Processor", "Pojo"]}

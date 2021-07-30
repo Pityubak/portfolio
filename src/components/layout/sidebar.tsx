@@ -25,7 +25,6 @@ const Sidebar = () => {
   }, [])
 
   const length = badges?.length ? Math.ceil((badges?.length - 1) / 2) : 0
-  console.log("Lenght",length)
 
   const { sidebarCount } = useAppSelector(state => state.navigation)
   const dispatch = useAppDispatch()
@@ -90,7 +89,11 @@ const Sidebar = () => {
                   className={`text-sm h-32 lg:h-20 w-20 lg:my-4 mx-4 relative transition duration-700 ease-in-out transform  ${
                     translateAmount === 0
                       ? "lg:-translate-y-0"
-                      : `lg:-translate-y-${translateAmount}`
+                      : translateAmount === 50
+                      ? "lg:-translate-y-50"
+                      : translateAmount === 100
+                      ? "lg:-translate-y-100"
+                      : "lg:-translate-y-150"
                   }`}
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">
@@ -113,10 +116,12 @@ const Sidebar = () => {
             })}
           </div>
           <button
-            disabled={translateAmount === (length !== 0 ? 50 * (length-1) : 100)}
+            disabled={
+              translateAmount === (length !== 0 ? 50 * (length - 1) : 100)
+            }
             onClick={() => {
               setTranslateAmount(
-                (translateAmount + 50) % (length !== 0 ? 50 * length  : 150)
+                (translateAmount + 50) % (length !== 0 ? 50 * length : 150)
               )
             }}
             className=" hidden lg:block text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
