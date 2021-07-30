@@ -36,7 +36,7 @@
     "gatsby-plugin-postcss": "^4.5.0",
     "postcss": "^8.2.15",
     "prettier": "^2.3.0",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.2.7"
   },
   "keywords": [
     "gatsby"
