@@ -13,12 +13,19 @@ const Sidebar = () => {
   const [translateAmount, setTranslateAmount] = React.useState<number>(0)
 
   React.useEffect(() => {
-    const lowerRank = cache?.badges?.filter(badge => badge.rank < 100)
-    const otherRank = cache?.badges?.filter(badge => badge.rank > 50)
+    const lowerRank = cache?.badges
+      ?.filter(badge => badge.rank < 100)
+      .filter(id => id.language !== "Objective-C")
+    const otherRank = cache?.badges
+      ?.filter(badge => badge.rank > 50)
+      .filter(id => id.language !== "Objective-C")
     if (typeof lowerRank !== "undefined" && typeof otherRank !== "undefined") {
       setBadges([...lowerRank, ...otherRank])
     }
   }, [])
+
+  const length = badges?.length ? Math.ceil((badges?.length - 1) / 2) : 0
+  console.log("Lenght",length)
 
   const { sidebarCount } = useAppSelector(state => state.navigation)
   const dispatch = useAppDispatch()
@@ -64,7 +71,9 @@ const Sidebar = () => {
           <button
             disabled={translateAmount === 0}
             onClick={() => {
-              setTranslateAmount((translateAmount - 50) % 100)
+              setTranslateAmount(
+                (translateAmount - 50) % (length !== 0 ? 50 * length : 150)
+              )
             }}
             className="hidden lg:block disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
@@ -79,7 +88,9 @@ const Sidebar = () => {
                 <div
                   key={badge.language + counter}
                   className={`text-sm h-32 lg:h-20 w-20 lg:my-4 mx-4 relative transition duration-700 ease-in-out transform  ${
-                    translateAmount === 0 ? "lg:-translate-y-0" : "lg:-translate-y-50"
+                    translateAmount === 0
+                      ? "lg:-translate-y-0"
+                      : `lg:-translate-y-${translateAmount}`
                   }`}
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">
@@ -102,9 +113,11 @@ const Sidebar = () => {
             })}
           </div>
           <button
-            disabled={translateAmount === 50}
+            disabled={translateAmount === (length !== 0 ? 50 * (length-1) : 100)}
             onClick={() => {
-              setTranslateAmount((translateAmount + 50) % 100)
+              setTranslateAmount(
+                (translateAmount + 50) % (length !== 0 ? 50 * length  : 150)
+              )
             }}
             className=" hidden lg:block text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
