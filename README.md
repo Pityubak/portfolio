@@ -1,3 +1,3 @@
 # My portfolio
 
-[DEMO](https://www.pityubak.ml/)
+My portfolio page is still under development, but you can already see the [DEMO](https://www.pityubak.ml/)
