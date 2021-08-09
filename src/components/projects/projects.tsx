@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className={`flex flex-1 items-center `}>
       {/* <Sidebar />  */}
-      <div className=" flex flex-1 w-full lg:h-136 flex-col items-center overflow-auto ">
+      <div className=" flex flex-1 w-full lg:h-136 hd:h-150 uhd:h-175 kd:h-200 flex-col items-center overflow-auto ">
         <h1 className="font-semibold text-center text-lg text-prl3 my-8 ">
           My projects
         </h1>

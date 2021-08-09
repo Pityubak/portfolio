@@ -12,8 +12,8 @@ const Layout = () => {
 
   return (
     <Wrapper>
-      <div className="flex items-center w-full">
-        <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg overflow-hidden">
+      <div className="flex items-center w-full ">
+        <div className=" relative flex flex-col w-full lg:rounded-lg lg:shadow-lg  overflow-hidden">
           <Header />
           <div className="flex lg:h-full w-full relative ">
             {index === 0 && <Home />}

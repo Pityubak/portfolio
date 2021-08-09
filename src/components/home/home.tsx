@@ -126,11 +126,18 @@ const options: Optional<Options> = {
 
 const Home = () => {
   const { width, height } = useWindowSize()
-  const size: MinMaxPair = [width * 0.6 - 300, height * 0.6 - 200]
+  const size: MinMaxPair =
+    width > 3000
+      ? [width * 0.35 - 300, height * 0.35 - 200]
+      : width > 2600
+      ? [width * 0.4 - 300, height * 0.4 - 200]
+      : width > 2100
+      ? [width * 0.5 - 300, height * 0.5 - 200]
+      : [width * 0.6 - 300, height * 0.6 - 200]
 
   return (
     <div
-      className={`flex flex-col lg:flex-row  lg:h-136 h-full items-center  flex-1 `}
+      className={`flex flex-col lg:flex-row  lg:h-136 hd:h-150 uhd:h-175 kd:h-200 h-full items-center  flex-1 `}
     >
       <Sidebar />
 
