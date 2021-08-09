@@ -22,7 +22,7 @@ const Circle = ({ radius, color, stroke, limit, text }: CircleProps) => {
   const circumference = normalizedRadius * 2 * Math.PI
   const strokeDashoffset = circumference - (progress / 100) * circumference
   return (
-    <div className="flex flex-col items-center text-prl3 p-2 m-2">
+    <div className="flex flex-col items-center text-prl3 hd:text-xl uhd:text-3xl p-2 m-2 ">
       <svg height={radius * 2} width={radius * 2}>
         <g>
           <circle

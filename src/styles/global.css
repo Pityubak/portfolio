@@ -29,28 +29,7 @@ circle {
   transform-origin: 50% 50%;
 }
 
-/* .upSlide {
-  animation: upSlide 2s cubic-bezier(0.87, 0, 0.13, 1);
-}
-.downSlide {
-  animation: downSlide 2s cubic-bezier(0.87, 0, 0.13, 1);
-}
-@keyframes upSlide {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-@keyframes downSlide {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(100%);
-  }
-} */
+
 .mobileLink {
   @apply px-8 py-2 mt-8  hover:bg-active hover:text-prl3 transition duration-500 ease-in-out flex items-center font-semibold   text-prl3;
 }

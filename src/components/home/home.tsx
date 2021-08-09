@@ -115,29 +115,23 @@ const words = [
   },
 ]
 
-const options: Optional<Options> = {
-  fontFamily: "courier new",
-  fontSizes: [20, 50],
-  colors: ["#048A81", "#9D44B5", "#C3423F", "#FCA311", "#3B60E4", "#1C7C54"],
-  enableTooltip: false,
-  rotations: 2,
-  rotationAngles: [-90, 0],
-}
-
 const Home = () => {
   const { width, height } = useWindowSize()
-  const size: MinMaxPair =
-    width > 3000
-      ? [width * 0.35 - 300, height * 0.35 - 200]
-      : width > 2600
-      ? [width * 0.4 - 300, height * 0.4 - 200]
-      : width > 2100
-      ? [width * 0.5 - 300, height * 0.5 - 200]
-      : [width * 0.6 - 300, height * 0.6 - 200]
+  const size: MinMaxPair = [width * 0.6 - 300, height * 0.6 - 200]
+
+  const fontSizes: [number, number] = width > 2600 ? [40, 80] :width > 2100 ? [30, 70] : [20, 50]
+  const options: Optional<Options> = {
+    fontFamily: "courier new",
+    fontSizes: fontSizes,
+    colors: ["#048A81", "#9D44B5", "#C3423F", "#FCA311", "#3B60E4", "#1C7C54"],
+    enableTooltip: false,
+    rotations: 2,
+    rotationAngles: [-90, 0],
+  }
 
   return (
     <div
-      className={`flex flex-col lg:flex-row  lg:h-136 hd:h-150 uhd:h-175 kd:h-200 h-full items-center  flex-1 `}
+      className={`flex flex-col lg:flex-row  lg:h-136 hd:h-200  kd:h-300 h-full items-center  flex-1 `}
     >
       <Sidebar />
 

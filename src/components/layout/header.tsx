@@ -24,9 +24,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="shadow-2xl w-full h-12 flex relative z-100">
+      <header className="shadow-2xl w-full h-12  uhd:h-20 flex relative z-100">
         <div className="absolute w-full h-full filter  bg-white   bg-opacity-10 z-0"></div>
-        <h1 className="text-prl3 ml-4 font-bold text-xl  w-1/2 md:text-2xl p-2">
+        <h1 className="text-prl3 ml-4 font-bold text-xl uhd:text-4xl uhd:p-4 uhd:mt-1 w-1/2 md:text-2xl p-2">
           Pityubak
         </h1>
 

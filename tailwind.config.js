@@ -19,12 +19,14 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        25:"6.25rem",
         50: "12.5rem",
         100: "25rem",
         150: "37.5rem",
-        175:"44rem",
+        175: "44rem",
         200: "50rem",
         250: "62.5rem",
+        300: "75rem",
         136: "34.5rem",
       },
 
@@ -50,10 +52,16 @@ module.exports = {
       screens: {
         portrait: { raw: "(orientation: portrait)" },
         blg: "1400px",
-        hd:"2100px",
-        uhd:"2600px",
-        kd:"3000px",
+        hd: "2100px",
+        uhd: "2600px",
+        kd: "3000px",
         ...defaultTheme.screens,
+      },
+      fontSize: {
+        ...defaultTheme.fontSize,
+        hd: ["2rem"],
+        uhd: ["2.4rem"],
+        hd: ["3rem"],
       },
       flex: {
         split: " 0 0 21%",

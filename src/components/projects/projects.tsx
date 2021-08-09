@@ -7,8 +7,8 @@ const Projects = () => {
   return (
     <div className={`flex flex-1 items-center `}>
       {/* <Sidebar />  */}
-      <div className=" flex flex-1 w-full lg:h-136 hd:h-150 uhd:h-175 kd:h-200 flex-col items-center overflow-auto ">
-        <h1 className="font-semibold text-center text-lg text-prl3 my-8 ">
+      <div className=" flex flex-1 w-full lg:h-136 hd:h-200  kd:h-300 flex-col items-center overflow-auto ">
+        <h1 className="font-semibold text-center hd:text-2xl uhd:text-5xl text-lg text-prl3 my-8 ">
           My projects
         </h1>
         <Card

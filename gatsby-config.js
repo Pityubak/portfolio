@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    FAST_REFRESH: true,
+  },
   siteMetadata: {
     title: `Pityubak's portfolio`,
     description: `Awesome portfolio of Pityubak`,

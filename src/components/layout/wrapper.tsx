@@ -45,7 +45,7 @@ const Wrapper = ({ children }: WrapperProps) => {
             {typeof document !== "undefined" && <BgDoodle />}
           </div>
         )}
-        <div className="relative  flex  flex-col w-full shadow-2xl   lg:w-10/12 blg:w-8/12 xl:w-9/12 hd:w-6/12 uhd:w-5/12 kd:w-4/12 md:items-center lg:rounded-lg  z-50 overflow-hidden bg-shiny bg-cover">
+        <div className="relative  flex  flex-col w-full shadow-2xl   lg:w-10/12 blg:w-8/12 xl:w-9/12 hd:w-8/12 uhd:w-8/12  md:items-center lg:rounded-lg  z-50 overflow-hidden bg-shiny bg-cover">
           {children}
         </div>
       </>

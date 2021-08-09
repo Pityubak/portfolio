@@ -28,7 +28,7 @@ const NavLink = ({ icon, text, selected }: NavLinkProps) => {
   return (
     <button
       onClick={() => desktopToogle()}
-      className={`px-8 ${
+      className={`px-8 uhd:px-16 uhd:text-4xl ${
         index === selected && "bg-active"
       } hover:bg-gray-600 hover:text-prl3 transition duration-500 ease-in-out flex items-center font-semibold  text-prl3`}
     >
