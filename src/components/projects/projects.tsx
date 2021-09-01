@@ -12,6 +12,16 @@ const Projects = () => {
           My projects
         </h1>
         <Card
+          chips={["React Native", "React Redux", "React Native Paper", "Firebase"]}
+          title="GarbageDay"
+          description="Android app with waste delivery calendar and reminder."
+          links={
+            <div className="flex w-full items-center justify-center">
+              <View href="https://garbageday-showcase.surge.sh/" text="View" />
+            </div>
+          }
+        />
+        <Card
           chips={["Gatsby", "React Redux", "MDB React", "styled-components"]}
           title="elszamolas2000bt.hu"
           description="Static website of a local accountancy firm with an accounting fee calculator.  "
