@@ -6,6 +6,7 @@
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: dash 10s ease-in-out;
+  -webkit-animation: dash 10s ease-in-out;
   fill: none;
   -webkit-fill: none;
   animation-fill-mode: both;
@@ -15,6 +16,15 @@
 }
 
 @keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    fill: currentColor;
+    -webkit-fill: currentColor;
+    stroke: none;
+    -webkit-stroke: none;
+  }
+}
+@-webkit-keyframes dash {
   100% {
     stroke-dashoffset: 0;
     fill: currentColor;
