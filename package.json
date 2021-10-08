@@ -38,8 +38,11 @@
     "prettier": "^2.3.0",
     "tailwindcss": "^2.2.7"
   },
+  
+    "browserslist": [">10%", "not dead"],
+  
   "keywords": [
-    "gatsby"
+    "gatsby","pityubak"
   ],
   "license": "0BSD",
   "scripts": {
