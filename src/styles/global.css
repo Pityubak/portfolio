@@ -12,7 +12,7 @@
 }
 
 @keyframes dash {
-  to {
+  100% {
     stroke-dashoffset: 0;
     fill: currentColor;
     stroke: none;

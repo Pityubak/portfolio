@@ -24,7 +24,9 @@ const Sidebar = () => {
     }
   }, [])
 
-  const length = badges?.length ? Math.ceil((badges?.length - 1) / 2) : 0
+  const length = badges?.length ? Math.ceil((badges?.length ) / 2) : 0
+
+  console.log("Lenght",badges?.length)
 
   const { sidebarCount } = useAppSelector(state => state.navigation)
   const dispatch = useAppDispatch()
@@ -71,9 +73,10 @@ const Sidebar = () => {
             disabled={translateAmount === 0}
             onClick={() => {
               setTranslateAmount(
-                (translateAmount - 50) % (length !== 0 ? 50 * length : 150)
+                (translateAmount - 50) % (length !== 0 ? 50 * length : 250)
               )
             }}
+
             className="hidden lg:block disabled:text-gray-400 text-prl3 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
           >
             <UpIcon />
@@ -93,7 +96,11 @@ const Sidebar = () => {
                       ? "lg:-translate-y-50"
                       : translateAmount === 100
                       ? "lg:-translate-y-100"
-                      : "lg:-translate-y-150"
+                      : translateAmount === 150
+                      ? "lg:-translate-y-150"
+                      : translateAmount === 200
+                      ? "lg:-translate-y-200"
+                      : "lg:-translate-y-250"
                   }`}
                 >
                   <div className=" shadow-2xl w-full justify-center flex flex-col items-center text-prl3 ">
@@ -117,11 +124,11 @@ const Sidebar = () => {
           </div>
           <button
             disabled={
-              translateAmount === (length !== 0 ? 50 * (length - 1) : 100)
+              translateAmount === (length !== 0 ? 50 * (length-1)  : 250)
             }
             onClick={() => {
               setTranslateAmount(
-                (translateAmount + 50) % (length !== 0 ? 50 * length : 150)
+                (translateAmount + 50) % (length !== 0 ? 50 * length : 250)
               )
             }}
             className=" hidden lg:block text-white disabled:text-gray-400 rounded-full my-2  transition ease-in-out duration-500 hover:bg-gray-600 p-2"
